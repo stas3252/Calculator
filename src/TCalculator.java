@@ -41,7 +41,7 @@ public class TCalculator {
             } else if (res < 0) {
                 return "-" + (String) Decoder.DecoderIntToRim.get(res * -1);
             } else {
-                if (res % 10 > 0) {
+                if (res > 10 && res % 10 > 0) {
                     int tmp = res % 10;
                     return (String) Decoder.DecoderIntToRim.get(res - tmp) + (String) Decoder.DecoderIntToRim.get(tmp);
                 } else {
